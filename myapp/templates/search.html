@@ -1,0 +1,35 @@
+<html>
+        {% include 'header.html' %}
+    <body>
+        {% include 'navbar.html' %}
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="h1">検索入力画面</h1>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-xs-7 col-xs-offset-1">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-xs-2 control-label">>備品名</label>
+                            <div class="col-xs-5 form-inline">
+                                <div class="input-group">
+                                    <input type="text" id="name" class="form-control" placeholder="例）　mac book air">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-2">
+                    <button type="button" class="btn btn-primary btn-block">検索</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
