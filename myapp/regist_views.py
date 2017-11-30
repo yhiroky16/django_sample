@@ -26,5 +26,4 @@ def create(request):
         'result': '登録しました。',
     }
 
-    print('登録しました')
-    return render(request, 'regist.html')
+    return render(request, 'regist.html', params)
