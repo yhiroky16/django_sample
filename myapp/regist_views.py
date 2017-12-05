@@ -21,9 +21,8 @@ def create(request):
             created_date = datetime.now(),
             updated_date = datetime.now())
         company_assets.save()
-    
+         
     params = {
         'result': '登録しました。',
     }
-
     return render(request, 'regist.html', params)
