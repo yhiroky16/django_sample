@@ -8,11 +8,11 @@ def index(request):
 
 def create(request):
     if request.method == 'POST':
-        item_name = request.POST.get('itemName', 'aaaaaa')
-        purchas_date = request.POST.get('purchaseDate', 'bbbbb')
-        buyer = request.POST.get('buyer', 'ccccc')
-        jungle = request.POST.get('jungle', 'ddddd')
-        memo = request.POST.get('memo', 'eeeee')
+        item_name = request.POST.get('itemName')
+        purchas_date = request.POST.get('purchaseDate')
+        buyer = request.POST.get('buyer')
+        jungle = request.POST.get('jungle')
+        memo = request.POST.get('memo')
         company_assets = CompanyAssets(item_name = item_name,
             purchas_date = purchas_date,
             buyer = buyer,
