@@ -6,7 +6,34 @@
     <div class="container">
         {% include 'search_form.html' %}
 
-        
+        <div class="row">
+            {% if result %}
+                <table class="table">
+                    <thead>
+                        <th>備品番号</th>
+                        <th>備品名</th>
+                        <th>購入日</th>
+                        <th>ジャンル</th>
+                        <th>メモ</th>
+                    </thead>
+                    <tbody>
+                        {% for value in result %}
+                            <tr>
+                                <td>{{ value.asets_no }}</td>
+                                <td>{{ value.item_name }}</td>
+                                <td>{{ value.purchas_date }}</td>
+                                <td>{{ value.jungle }}</td>
+                                <td>{{ value.memo }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+            <div class="col-xs-4 col-xs-offset-4">
+                    <span class="h3" style="color:red">該当する備品がありません。</span>
+                </div>
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>
